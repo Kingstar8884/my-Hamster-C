@@ -61,7 +61,7 @@ const App: React.FC = () => {
   const pointsToAdd = 19;
   const profitPerHour = 533585435;
 
-
+/*
   useEffect(() => {
     window.Telegram.WebApp.ready();
 
@@ -71,9 +71,7 @@ const App: React.FC = () => {
     }
 
   }, []);
-
-
-
+*/
   const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
   const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
   const [dailyComboTimeLeft, setDailyComboTimeLeft] = useState("");
@@ -172,7 +170,7 @@ const App: React.FC = () => {
               <Hamster size={24} className="text-[#d4d4d4]" />
             </div>
             <div>
-              <p className="text-sm">{user? user.first_name : ""} (CEO)</p>
+              <p className="text-sm">(CEO)</p>
             </div>
           </div>
           <div className="flex items-center justify-between space-x-4 mt-1">
