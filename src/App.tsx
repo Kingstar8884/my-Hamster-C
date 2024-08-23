@@ -9,21 +9,6 @@ import Friends from './icons/Friends';
 import Coins from './icons/Coins';
 
 
-/*
-// Type declarations for Telegram WebApp
-declare global {
-  interface TelegramWebApp {
-    ready: () => void;
-    initDataUnsafe: any; // Adjust type as needed
-  }
-
-  interface Window {
-    Telegram: {
-      WebApp: TelegramWebApp;
-    };
-  }
-}
-*/
 
 
 const App: React.FC = () => {
@@ -54,24 +39,11 @@ const App: React.FC = () => {
   ];
 
 
-  const [user, setUser] = useState<any>(null);
   const [levelIndex, setLevelIndex] = useState(6);
   const [points, setPoints] = useState(96765576435);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
   const pointsToAdd = 19;
   const profitPerHour = 533585435;
-
-/*
-  useEffect(() => {
-    window.Telegram.WebApp.ready();
-
-    const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
-    if (initDataUnsafe) {
-      setUser(initDataUnsafe);
-    }
-
-  }, []);
-*/
   const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
   const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
   const [dailyComboTimeLeft, setDailyComboTimeLeft] = useState("");
