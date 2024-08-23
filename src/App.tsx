@@ -35,6 +35,9 @@ const App: React.FC = () => {
     1000000000// Lord
   ];
 
+  window.Telegram.Webapp.ready();
+  const user = window.Telegram.Webapp.initDataUnsafe;
+
   const [levelIndex, setLevelIndex] = useState(6);
   const [points, setPoints] = useState(96765576435);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
@@ -139,7 +142,7 @@ const App: React.FC = () => {
               <Hamster size={24} className="text-[#d4d4d4]" />
             </div>
             <div>
-              <p className="text-sm">Stark Nil (CEO)</p>
+              <p className="text-sm">{user.first_name} (CEO)</p>
             </div>
           </div>
           <div className="flex items-center justify-between space-x-4 mt-1">
