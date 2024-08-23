@@ -9,7 +9,7 @@ import Friends from './icons/Friends';
 import Coins from './icons/Coins';
 
 
-
+/*
 // Type declarations for Telegram WebApp
 declare global {
   interface TelegramWebApp {
@@ -23,7 +23,7 @@ declare global {
     };
   }
 }
-
+*/
 
 
 const App: React.FC = () => {
