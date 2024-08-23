@@ -35,14 +35,26 @@ const App: React.FC = () => {
     1000000000// Lord
   ];
 
-  //window.Telegram.Webapp.ready();
-  const user = window.Telegram.Webapp.initDataUnsafe;
 
+  const [user, setUser] = useState<any>(null);
   const [levelIndex, setLevelIndex] = useState(6);
   const [points, setPoints] = useState(96765576435);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
   const pointsToAdd = 19;
   const profitPerHour = 533585435;
+
+
+  useEffect(() => {
+    window.Telegram.WebApp.ready();
+
+    const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
+    if (initDataUnsafe) {
+      setUser(initDataUnsafe);
+    }
+
+  }, []);
+
+
 
   const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
   const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
