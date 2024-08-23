@@ -38,7 +38,7 @@ const App: React.FC = () => {
   const [levelIndex, setLevelIndex] = useState(6);
   const [points, setPoints] = useState(96765576435);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
-  const pointsToAdd = 46745;
+  const pointsToAdd = 19;
   const profitPerHour = 533585435;
 
   const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
