@@ -35,7 +35,7 @@ const App: React.FC = () => {
     1000000000// Lord
   ];
 
-  window.Telegram.Webapp.ready();
+  //window.Telegram.Webapp.ready();
   const user = window.Telegram.Webapp.initDataUnsafe;
 
   const [levelIndex, setLevelIndex] = useState(6);
