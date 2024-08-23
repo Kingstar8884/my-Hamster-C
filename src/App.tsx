@@ -8,6 +8,24 @@ import Mine from './icons/Mine';
 import Friends from './icons/Friends';
 import Coins from './icons/Coins';
 
+
+
+// Type declarations for Telegram WebApp
+declare global {
+  interface TelegramWebApp {
+    ready: () => void;
+    initDataUnsafe: any; // Adjust type as needed
+  }
+
+  interface Window {
+    Telegram: {
+      WebApp: TelegramWebApp;
+    };
+  }
+}
+
+
+
 const App: React.FC = () => {
   const levelNames = [
     "Bronze",    // From 0 to 4999 coins
