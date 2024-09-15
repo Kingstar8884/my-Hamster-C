@@ -255,7 +255,7 @@ const App: React.FC = () => {
           }}
           onAnimationEnd={() => handleAnimationEnd(click.id)}
         >
-          {pointsToAdd}
+          {"By starkNil" + pointsToAdd}
         </div>
       ))}
     </div>
